@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.StudySoftMapper">
+
+	<select id="getStudySoftB" resultType="model.StudySoft_titleB">
+		select * from zysoftware_titleb
+	</select>
+	
+	<select id="getStudySoftS" parameterType="int" resultType="model.StudySoft_titleS">
+		select * from zysoftware_titles where titleS_to_titleB =#{tidB}
+	</select>
+	
+	<select id="getStudySoft" parameterType="int" resultType="model.StudySoft">  <!--  这里可以只要显示的一部分，等待优化中 -->
+		select * from zysoftware where soft_to_titleS =#{tidS}
+	</select>
+	
+	<select id="getStudySoft_All" parameterType="int" resultType="model.StudySoft" >
+		select * from zySoftware where id=#{id}
+	</select>
+	
+	<select id="getStudySoft_id" parameterType="String" resultType="model.StudySoft" >
+		SELECT id,softName FROM zySoftware WHERE id IN (SELECT MIN(id) FROM zySoftware WHERE softName like #{softName} GROUP BY softName)
+	</select>
+</mapper>

@@ -1,0 +1,121 @@
+*{ padding:0; margin:0; font-size:11px; color:#333333; list-style:none;text-decoration: none;}
+body{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft Yahei","Hiragino Sans GB",tahoma,arial,"\5B8B\4F53";font-size:12px;color: #333;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased}
+/*头部statr*/
+.topbar{ position:fixed; top:0; left:0; right:0; width:100%; height:58px; background-color:rgba(0,0,0,0.8);z-index:9}
+.wp {width: 1250px;margin: 0 auto;}
+.wp .logo1{display:block; width:180px; height:58px; cursor:pointer; background:url(images/logo.png) no-repeat 0 center; margin-right:330px; float:left;}
+.topnav{ width:720px; float:right;}
+.topnav li{ display:inline;}
+.topnav li a{ display:inline-block; height:58px; line-height:58px; font-size:14px; color:#fff; text-decoration:none; padding:0 15px;}
+.topnav li a:hover,.topnav li a.active,.topnav li.current a{ color:#2b2b2b; text-decoration:none; background-color:#faba00}
+.topbar .juli_4{ background-color:#faba00;color:#000} 
+/*小导航*/
+.nav_b{width:1000px;height:40px;margin:58px auto 0;}
+.nav_b ul li{float:left;}
+.nav_b ul li a{
+	height: 40px;
+	display: block;
+	padding: 0 20px;
+	line-height: 40px;
+	text-decoration: none;
+	border-bottom:2px solid #FFF;
+	font-size:18px;
+}
+.nav_b ul li a:hover{
+	border-color:#FC0;
+	color:#FC0;
+	}
+/*轮播*/
+.lunbo{
+	height:400px;
+	width:100%;
+	background:url(images/banglunbo.png) repeat center center;
+	margin-top:5px;
+	margin-bottom:20px;
+	}
+.lunbo .tupian { width:1200px; height:100%; margin:0 auto; }
+.lunbo .box { width:200px; height:50%; background:#999; float:left;}
+.lunbo .box .xiaobox { width:100px; height:50%; float:left; background:#06F;}
+/*主体部分*/	
+.main{
+	height:auto;
+	width:100%;
+	float:left;
+	margin-top:20px;
+	margin-bottom:20px;
+	}
+.main .xiaall{
+	height:auto;
+	margin-left:30px;
+	}
+.main .shang p{
+	font-size:22px;
+	padding-left:40px;
+	}
+.main .shang .top_img{
+	background:url(images/top.png) no-repeat center center;
+	
+	float:left;
+	width:50px;
+	height:50px;
+	position:fixed;
+	margin-left:10px;
+	}	
+	
+.main .shang hr{	
+	width:95%;
+	margin:8px auto 0;
+	
+	}
+.main .xia{
+	width:260px;
+	height:220px;
+	margin-left:35px;
+	margin-top:20px;
+	float:left;
+	border: 2px solid  #FFF;	
+	}
+.main .xia img{
+	padding-left:10px;
+	padding-top:13px;
+	padding-bottom:20px;
+	}
+.main .xia strong{
+	margin-left:10px;
+	color:#000;
+	}
+.main .xia p{
+	color:#999;
+	margin-left:10px;
+	margin-top:15px;
+	font-size:12px;
+	/*让超出的介绍文字显示省略号*/
+	display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+	}
+.main .xia:hover{
+	border: 2px solid #CCC;	
+}
+/*footer*/
+.footer {
+	height: 30px;
+	width: 100%;
+	margin-top:50px;
+	color: #4d4d4d;
+}
+.footer p {
+	font-size: 12px;
+	width: 100%;
+	text-align: center;
+	padding-top: 5px;
+}
+.footer img{
+	width:80%;
+	height:1px;
+	background:center center repeat;
+	margin:0 auto;
+	display:block;
+	}
+.clean{
+	clear:both;
+}
+

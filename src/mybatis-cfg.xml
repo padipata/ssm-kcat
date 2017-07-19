@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE configuration 
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-config.dtd"> 
+<configuration> 
+    <properties resource="db.properties"></properties>
+    <!-- 对事务的管理和连接池的配置 --> 
+    <environments default="development"> 
+        <environment id="kcat"> 
+            <transactionManager type="JDBC" /> 
+            <dataSource type="POOLED"> 
+                <property name="driver" value="${db.driver}" /> 
+                <property name="url" value="${db.url}" /> 
+                <property name="username" value="${db.username}" /> 
+                <property name="password" value="${db.password}" /> 
+            </dataSource> 
+        </environment> 
+    </environments> 
+
+    <!-- mapping 文件路径配置 --> 
+    <mappers> 
+		<!--<mapper resource="javastudy/userMapper.xml"/> -->
+		<!-- <mapper class="javastudy.CourseMapper"/> -->		
+<!-- jh -->		
+		<mapper class="mapper.FirstMapper"/>
+<!-- yb -->		
+		<mapper class="mapper.BangMapper"/>
+ 		<mapper class="mapper.HomeworkMapper"/>
+ 		<mapper class="mapper.PlaySoftMapper"/>
+<!-- boss-->
+ 		<mapper class="mapper.HomeworkMapper"/>
+ 		<mapper class="mapper.TelMapper"/>	
+ 		
+<!-- 后台 yb-->
+ 		<mapper class="mapper.AdminMapper"/>
+ 		
+ 		
+ 		
+    </mappers> 
+</configuration>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.FirstMapper">
+	<select id="login" parameterType="model.First"  resultType="model.First">
+		SELECT * FROM user WHERE userName = #{userName} AND userPwd = #{userPwd}
+	</select>
+	
+	<select id="checkUser" parameterType="model.First"  resultType="model.First">
+		SELECT * FROM user WHERE userName = #{userName}
+	</select>
+	
+	<select id="addUser" parameterType="model.First"  resultType="model.First">
+		INSERT INTO kcat.user ( userName, userPwd, email, sex, birthday) VALUES (#{userName},#{userPwd},#{email},#{sex},#{birthday})	
+	</select>
+	
+	<select id="getPartUser" parameterType="model.Pager" resultType="model.First">	
+		SELECT * FROM user LIMIT #{pageNo},#{pageSize}
+	</select>
+	
+	<select id="findUserById" parameterType="int" resultType="model.First">
+		SELECT * FROM user WHERE id = #{id}
+	</select>
+	
+	<delete id="deleteUser" parameterType="int">
+		delete from user where id=#{id}
+	</delete>
+	
+	<update id="modifyUser" parameterType="model.First">
+		update user set userName=#{userName},userPwd=#{userPwd},email=#{email},sex=#{sex},birthday=#{birthday},date=#{date} where id=#{id}
+	</update>
+	
+	
+
+</mapper>

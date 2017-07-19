@@ -1,0 +1,290 @@
+﻿@charset "utf-8";
+/* 
+date:6:58 2014-9.11
+Copyright H-ui&zcool Inc.
+Created & Modified by guojunhui.
+*/
+/*1 重定义浏览器默认样式
+	Name:			style_reset
+	Level:			Global
+	Explain:		重定义浏览器默认样式
+	Last Modify:	jackying
+*/
+* {
+	word-wrap: break-word
+}
+html, body, h1, h2, h3, h4, h5, h6, hr, p, iframe, dl, dt, dd, ul, ol, li, pre, form, button, input, textarea, th, td, fieldset {
+	margin: 0;
+	padding: 0
+}
+ul, ol, dl {
+	list-style-type: none
+}
+html, body {
+	*position:static;
+	background: #ffffff;
+}
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%
+}
+address, caption, cite, code, dfn, em, th, var {
+	font-style: normal;
+	font-weight: normal
+}
+input, button, textarea, select, optgroup, option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit
+}
+input, button {
+	overflow: visible;
+	vertical-align: middle;
+	outline: none;
+}
+body, th, td, button, input, select, textarea {
+	font-family: "\5FAE\8F6F\96C5\9ED1", "Microsoft Yahei", "Hiragino Sans GB", tahoma, arial, "\5B8B\4F53";
+	font-size: 12px;
+	color: #333;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased
+}
+body {
+	line-height: 1.6;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%
+}
+a, area {
+	outline: none;
+blr:expression(this.onFocus=this.blur())
+}
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+a:hover {
+	text-decoration: underline;
+	outline: none
+}
+a.ie6:hover {
+	zoom: 1
+}
+a:focus {
+	outline: none
+}
+a:hover, a:active {
+	outline: none
+}
+:focus {
+	outline: none
+}
+sub, sup {
+	vertical-align: baseline
+}
+/*img*/
+img {
+	border: 0;
+	vertical-align: middle
+}
+a img, img {
+	-ms-interpolation-mode: bicubic
+}
+/*IE下a:hover 背景闪烁*/
+html {
+	overflow: -moz-scrollbars-vertical;
+zoom:expression(function(ele) {
+ele.style.zoom = "1";
+document.execCommand("BackgroundImageCache", false, true)
+}
+(this))
+}
+/*HTML5 reset*/
+header, footer, section, aside, details, menu, article, section, nav, address, hgroup, figure, figcaption, legend {
+	display: block;
+	margin: 0;
+	padding: 0
+}
+time {
+	display: inline
+}
+audio, canvas, video {
+	display: inline-block;
+*display:inline;
+*zoom:1
+}
+audio:not([controls]) {
+	display: none
+}
+legend {
+	width: 100%;
+	margin-bottom: 20px;
+	font-size: 21px;
+	line-height: 40px;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5
+}
+legend small {
+	font-size: 15px;
+	color: #999
+}
+svg:not(:root) {
+	overflow: hidden
+}
+fieldset {
+	border-width: 0;
+	padding: 0.35em 0.625em 0.75em;
+	margin: 0 2px;
+	border: 1px solid #c0c0c0
+}
+/*
+	Name:			style_clearfix
+	Example:		class="clearfix|cl"
+	Explain:		Clearfix（简写cl）避免因子元素浮动而导致的父元素高度缺失能问题
+*/
+.cl:after, .clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+}
+.cl, .clearfix {
+	zoom: 1
+}
+.l {
+	float: left!important;
+	_display: inline
+}
+.r {
+	float: right!important;
+	_display: inline
+}
+.text-l {
+	text-align: left
+}
+.text-r {
+	text-align: right
+}
+.text-c {
+	text-align: center
+}
+.va-t {
+	vertical-align: top!important
+}
+.va-m {
+	vertical-align: middle!important
+}
+.va-b {
+	vertical-align: bottom!important
+}
+.wp {
+	width: 1250px;
+	margin: 0 auto;
+}
+html, body, #container, .section {
+	width: 100%;
+	height: 100%
+}
+
+
+
+/*内容区*/
+#container {
+	min-width: 980px
+}
+.section {
+	min-height: 650px;
+	background: repeat-x center center fixed ;
+	background-size: cover;
+	overflow: hidden
+}
+.section .wp {
+	position: relative;
+	height: 100%;
+	display: table;
+}
+.section .tuwen {
+	display: table-cell;
+	height: 100%;
+	overflow: hidden;
+	vertical-align: middle
+}
+.section .tuwennr {
+	padding: 25px;
+	width: 430px;
+	height: auto;
+	background-color: rgba(0,0,0,0.8);
+}
+#section-1 {
+	background-image: url(http://kcat-1251241286.cosgz.myqcloud.com/images/index/1.jpg)
+}
+#section-2 {
+	background-image: url(http://kcat-1251241286.cosgz.myqcloud.com/images/index/2.jpg)
+}
+#section-3 {
+	background-image: url(http://kcat-1251241286.cosgz.myqcloud.com/images/index/3.jpg)
+}
+#section-4 {
+	background-image: url(http://kcat-1251241286.cosgz.myqcloud.com/images/index/4.jpg)
+}
+#section-5 {
+	background-image: url(http://kcat-1251241286.cosgz.myqcloud.com/images/index/5.jpg)
+}
+#section-6 {
+	background-image: url(http://kcat-1251241286.cosgz.myqcloud.com/images/index/6.jpg)
+}
+#section-1 .tuwennr {
+	padding: 0;
+	margin: 0 auto;
+	width: 622px;
+	height: 447px;
+	background: url(../images/index/1-1.png) no-repeat 0 0
+}
+.tuwen .title {
+	font-size: 24px;
+	font-weight: bold;
+	color: #faba00
+}
+.tuwen .info {
+	color: #fff;
+	font-size: 14px;
+	line-height: 24px;
+	margin-top: 25px
+}
+.tuwen .btnbar {
+	margin-top: 25px;
+}
+.tuwen .btn-buy {
+	display: inline-block;
+	width: 144px;
+	height: 44px;
+	line-height: 44px;
+	color: #faba00;
+	font-size: 16px;
+	border: solid 2px #faba00;
+	text-decoration: none;
+}
+.paddingW {
+	width: 30px;
+	display: inline-block;
+	transition: width 0.2s linear 0s
+}
+.tuwen .btn-buy:hover {
+	background-color: #faba00;
+	color: #2b2b2b
+}
+.tuwen .btn-buy:hover .paddingW {
+	width: 40px;
+}
+/*.........重写css...................*/
+.footer { width:100%; height:100px; float:left; padding-top:15px; padding-bottom:10px;}
+.footer .footer_1 { width:20%; float:left;padding-left:30%;}
+.footer .footer_1 h6 { color:#CCC; }
+.footer .footer_1 font { color:#999; display:block; clear:none;}
+.footer .footer_2{ width:35%; float:right; padding-left:15%; }
+.footer .footer_2 a { color:#ccc;}
+.footer .footer_3 { width:100%; float:left; margin-top:15px; margin-bottom:5px;}
+.footer .footer_3 font { color:#999; display:block; margin:auto;}

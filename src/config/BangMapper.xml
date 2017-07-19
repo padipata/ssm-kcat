@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.BangMapper">
+	<select id="getBang" parameterType="int" resultType="model.Bang">
+		select * from bang where videoType =#{tid}
+	</select>
+	<select id="getTitle" resultType="model.BangTitle">
+		select * from bang_title
+	</select>
+
+</mapper>

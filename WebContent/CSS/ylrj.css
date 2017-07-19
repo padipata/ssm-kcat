@@ -1,0 +1,45 @@
+/* CSS Document */
+
+*{ padding:0; margin:0; font-size:12px; color:#646464;}
+.wp {
+	width: 1250px;
+	margin: 0 auto;
+}
+.topbar .juli_2{ background-color:#faba00;color:#000}
+body{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft Yahei","Hiragino Sans GB",tahoma,arial,"\5B8B\4F53";font-size:12px;color: #333;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased}
+
+.userbar,.userbar a{ font-size:14px; line-height:58px; color:#a8a8a8; text-decoration:none}
+.userbar a:hover{ color:#fff;}
+	
+.all .main { width:1010px; height:1500px; margin:0 auto; margin-top:60px;}
+.all .main .left { width:855px; height:100%; margin:0 auto;}
+.all .main .left .box { width:100%; height:310px;}
+.all .main .left .box .shang { width:100%; height:50px; line-height:75px; border-bottom:solid #d8d8d8 2px;}
+.all .main .left .box .xia { width:100%; height:260px;}
+.all .main .left .box .xia .ruanjian { width:200px; height:86px; float:left; margin-right:8px;}
+.all .main .left .box .xia .ruanjian .tubiao { width:60px; height:60px;  no-repeat center center; float:left; margin:10px 10px; }
+.all .main .left .box .xia .ruanjian .ming { width:114px; height:25px; float:right; font-family:"Î¢ÈíÑÅºÚ", "ºÚÌå"; margin-top:10px;}
+.all .main .left .box .xia .ruanjian .fenlei { width:114px; height:27px; float:left; font-size:12px; color:#919191; margin-left:6px;}
+.all .main .left .box .xia .ruanjian .huoqu { width:45px; height:15px; float:left; margin-left:5px;}
+.all .main .left a{ text-decoration:none;}
+.all .main .left a:hover { text-decoration:underline;}
+/*.............footer.................	*/
+.footer {
+	height: 30px;
+	width: 100%;
+	margin-top:50px;
+	color: #4d4d4d;
+}
+.footer p {
+	font-size: 12px;
+	width: 100%;
+	text-align: center;
+	padding-top: 5px;
+}
+.footer img{
+	width:80%;
+	height:1px;
+	background:center center repeat;
+	margin:0 auto;
+	display:block;
+	}
