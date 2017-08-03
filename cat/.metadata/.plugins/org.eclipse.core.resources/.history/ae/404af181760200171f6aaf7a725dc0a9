@@ -1,0 +1,12 @@
+package mapper;
+
+import java.util.ArrayList;
+
+import model.Homework;
+
+public interface HomeworkMapper {
+	public ArrayList<Homework> getHomework();
+	public int getCid();
+//	public ArrayList<Homework> getCategory();
+	
+}

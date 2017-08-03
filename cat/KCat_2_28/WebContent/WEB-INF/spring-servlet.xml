@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"   
+    
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/mvc 
+		http://www.springframework.org/schema/mvc/spring-mvc-4.1.xsd
+        http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+<!-- 使用注释方式 -->
+	<mvc:annotation-driven/>
+<!-- 自动扫描Controller-->
+	<context:component-scan base-package="controller"/>
+	
+<!-- 配置一个springMVC视图解析器 -->	
+<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	    <property name="prefix" value= ""/>
+	    <property name="suffix" value= ".jsp"/>
+</bean> 
+<!-- 返回json的处理 -->	
+	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter"> 
+	    <property name="messageConverters"> 
+	        <list> 
+	            <bean class="org.springframework.http.converter.StringHttpMessageConverter"> 
+	                <property name="supportedMediaTypes"> 
+	                    <list> 
+	                        <value>text/html; charset=UTF-8</value> 
+	                        <value>application/json;charset=UTF-8</value> 
+	                    </list> 
+	                </property> 
+	            </bean> 
+	            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"> 
+	                <property name="supportedMediaTypes"> 
+	                    <list> 
+	                        <value>text/html; charset=UTF-8</value> 
+	                        <value>application/json;charset=UTF-8</value> 
+	                    </list> 
+	                </property> 
+	            </bean> 
+	        </list> 
+	    </property>  
+	</bean>
+<!-- 上传文件配置-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="utf-8" />  <!-- 设置编码 -->
+		<property name="maxUploadSize" value="15485760" />   <!--  文件最大限制10MB -->
+	</bean>
+<!-- springMVC 拦截器定义 -->
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<!--拦截所有的请求 -->
+        	<mvc:mapping path="/back/**"/>    <!-- 拦截包含play -->
+			<!-- 使用bean定义一个Interceptor:interceptor是类的位置 -->
+			<bean class="interceptor.AuthorizationInterceptor"/>
+			
+		</mvc:interceptor>
+	</mvc:interceptors>
+
+
+</beans>

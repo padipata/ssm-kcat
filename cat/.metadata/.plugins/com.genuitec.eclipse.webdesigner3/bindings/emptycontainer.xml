@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+	<binding id="block">
+		<content>
+				<children/>
+	    </content>
+	    <implementation>
+	    	<constructor>
+				this.setAttribute("wd3_isContainer", "true");
+	    	</constructor>
+	    </implementation>
+	</binding>
+	<binding id="inline">
+		<content>
+			<children/>
+	    </content>
+	    <implementation>
+	    	<constructor>
+				this.setAttribute("wd3_isContainer", "false");
+	    	</constructor>
+	    </implementation>
+	</binding>
+</bindings>

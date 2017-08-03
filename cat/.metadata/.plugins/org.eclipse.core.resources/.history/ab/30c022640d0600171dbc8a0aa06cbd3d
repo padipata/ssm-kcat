@@ -1,0 +1,139 @@
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>专业软件</title>
+<link rel="Shortcut Icon" href="${pageContext.request.contextPath}/images/tubiao.ico">
+<link rel="stylesheet" href="${pageContext.request.contextPath}/CSS/zyrj.css" type="text/css" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/jQuery/jquery.js"></script>
+
+<script type="text/javascript">
+$(function(){
+
+	var html="";
+	$.ajaxSetup({async:false});
+ 	$.post("${pageContext.request.contextPath}/getStudySoftB.do",function(data){  //循环标题
+		$.each(data,function(i,e){	
+			html+="<div class='zuo'><div class='nav_b'><ul><li class='xueyuan'>"+data[i].titleBName+"</li></ul></div>";
+			$.post("${pageContext.request.contextPath}/getStudySoftS.do",{'titleS_to_titleB':data[i].id},function(data_2){  //循环小标题
+				$.each(data_2,function(j,f){
+					html+="<div class='zhuanye'><p>"+data_2[j].titleSName+"</p><img src='${pageContext.request.contextPath}/images/hr.png' class='hr'>";
+					$.post("${pageContext.request.contextPath}/getStudySoft.do",{'soft_to_titleS':data_2[j].id},function(data_3){  //循环软件内容
+						$.each(data_3,function(k,g){
+							html+="<div class='ruanjian'><a href='"+data_3[k].softUrl+"' target='_blank'><img src='${pageContext.request.contextPath}/images/"+data_3[k].softImage+"'/></a>";
+							html+="<a href='"+data_3[k].softUrl+"' target='_blank'><p class='big'>"+data_3[k].softName+"</p></a>";
+							html+="<p class='small'>"+data_3[k].softType+"</p><a href='"+data_3[k].softUrl+"' target='_blank'><img src='${pageContext.request.contextPath}/images/bxiazai.png' class='xiazai'/></a></div>";
+						});
+					});
+					html+="</div>";
+				});
+			});
+			html+="</div>";
+		});
+		$(".main").append(html); 
+	}); 
+});
+	
+</script>
+
+</head>
+
+<body>
+<div class="all">
+<!--头部start-->
+    <div class="topbar">
+		<div class="wp"><a href="index.html" target="_parent"><div class="logo1"></div></a>
+            <ul id="nav" class="topnav l">
+                <li class="current"><a style="display:none"></a></li> 		
+                <li><a class="juli" href="zhuanyeruanjian.html">专业软件</a></li>
+                <li><a href="yuleruanjian.html">娱乐软件</a></li>
+                <li><a href="zuoyefuzhu.html">作业辅助</a></li>
+                <li><a href="bangbangbang.html">帮帮帮</a></li>
+                <li><a href="xiaoyuandianhua.html">校园电话</a></li>
+                <div id="divc"> </div>
+            </ul>
+		</div>
+	</div>
+<!--头部end-->
+
+<!--图片区 start-->
+    <img src="${pageContext.request.contextPath}/images/xiazaitu.jpg" class="pho">
+    <a name="xg"></a>
+<!--图片区end-->
+
+<!--main区域 start-->
+    <div class="main">
+  
+<!-- 右边固定的导航start-->
+		<div class="you">
+			<p class="kslj">快速链接</p>           
+			<img src="${pageContext.request.contextPath}/images/hr.png" class="hr" style="width:100%">
+			<p><a style="cursor:pointer" class="active_1">信息工程学院</a>
+			<ul>
+	            <a style="cursor:pointer" class="active_1"><li>计算机应用技术</li></a>
+	            <a style="cursor:pointer" class="active_1"><li>计算机网络技术</li></a>
+	            <a style="cursor:pointer" class="active_1"><li>动漫设计与制作</li></a>
+	            <a style="cursor:pointer" class="active_1"><li>电子商务</li></a>
+	            <a style="cursor:pointer" class="active_1"><li>电子信息工程</li></a>
+	        </ul>
+            </p>
+            <p><a style="cursor:pointer" class="active_2">管理学院</a>
+	            <ul>
+	                <a style="cursor:pointer" class="active_2"><li>工商企业管理</li></a>
+	                <a style="cursor:pointer" class="active_2"><li>城市轨道交通运营管理</li></a>
+	                <a style="cursor:pointer" class="active_2"><li>物流管理</li></a>
+	                <a style="cursor:pointer" class="active_2"><li>社会工作</li></a>
+	                <a style="cursor:pointer" class="active_2"><li>旅游英语</li></a>
+	            </ul>
+            </p>
+            <p><a style="cursor:pointer" class="active_3">商贸学院</a>
+                <ul>
+                    <a style="cursor:pointer" class="active_3"><li>财务管理</li></a>
+                    <a style="cursor:pointer" class="active_3"><li>国际经济与贸易</li></a>
+                    <a style="cursor:pointer" class="active_3"><li>会展策划与管理</li></a>
+                    <a style="cursor:pointer" class="active_3"><li>市场营销</li></a>
+                    <a style="cursor:pointer" class="active_3"><li>应用英语</li></a>
+                </ul>
+            </p>
+			<p><a style="cursor:pointer" class="active_4">机电工程学院</a>
+			    <ul>
+			        <a style="cursor:pointer" class="active_4"><li>电气自动化技术</li></a>
+			        <a style="cursor:pointer" class="active_4"><li>模具设计与制造</li></a>
+			        <a style="cursor:pointer" class="active_4"><li>机电一体化技术</li></a>
+			        <a style="cursor:pointer" class="active_4"><li>汽车检测与维修技术</li></a>
+			        <a style="cursor:pointer" class="active_4"><li>汽车技术服务与运营</li></a>
+			    </ul>
+			</p>
+            <p><a style="cursor:pointer" class="active_5">创意与设计学院</a>
+                <ul>
+                    <a style="cursor:pointer" class="active_5"><li>艺术设计</li></a>
+                    <a style="cursor:pointer" class="active_5"><li>产品造型设计</li></a>
+                </ul>
+            </p>
+            <p><a style="cursor:pointer" class="active_6">服装艺术学院</a>
+                <ul>
+                    <a style="cursor:pointer" class="active_6"><li>皮具设计</li></a>
+                    <a style="cursor:pointer" class="active_6"><li>服装设计</li></a>
+                    <a style="cursor:pointer" class="active_6"><li>音乐表演</li></a>
+                </ul>
+            </p>
+		</div>
+		<script type="text/javascript"> 
+		    jQuery(document).ready(function($){ 
+		    <!--$('.active_1').click(function(){$('html,body').animate({scrollTop: '0px'}, 500);});-->
+		    $('.active_1').click(function(){$('html,body').animate({scrollTop:$('.a').offset().top}, 800);});  
+		    $('.active_2').click(function(){$('html,body').animate({scrollTop:$('.b').offset().top}, 800);}); 
+		    $('.active_3').click(function(){$('html,body').animate({scrollTop:$('.c').offset().top}, 800);});
+		    $('.active_4').click(function(){$('html,body').animate({scrollTop:$('.d').offset().top}, 800);});
+		    $('.active_5').click(function(){$('html,body').animate({scrollTop:$('.e').offset().top}, 800);});
+		    $('.active_6').click(function(){$('html,body').animate({scrollTop:$('.f').offset().top}, 800);});
+		    }); 
+   		</script> 
+<!-- 右边固定的导航end-->
+    </div>
+<!--main区域  end-->
+</div>
+
+</body>
+</html>

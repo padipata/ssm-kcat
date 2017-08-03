@@ -1,0 +1,86 @@
+package model;
+
+public class PlaySoft {
+	  private int id;
+	  private String softName;
+	  private String softType;
+	  private String softImage;
+	  private String softUrl;
+	  private int soft_to_title;
+	  private String jianjie;
+	  private String jietu;
+	  private String update;
+	  private String version;
+	  
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getSoftName() {
+		return softName;
+	}
+	public void setSoftName(String softName) {
+		this.softName = softName;
+	}
+	public String getSoftType() {
+		return softType;
+	}
+	public void setSoftType(String softType) {
+		this.softType = softType;
+	}
+	public String getSoftImage() {
+		return softImage;
+	}
+	public void setSoftImage(String softImage) {
+		this.softImage = softImage;
+	}
+	public String getSoftUrl() {
+		return softUrl;
+	}
+	public void setSoftUrl(String softUrl) {
+		this.softUrl = softUrl;
+	}
+	public int getSoft_to_title() {
+		return soft_to_title;
+	}
+	public void setSoft_to_title(int soft_to_title) {
+		this.soft_to_title = soft_to_title;
+	}
+	public String getJianjie() {
+		return jianjie;
+	}
+	public void setJianjie(String jianjie) {
+		this.jianjie = jianjie;
+	}
+	public String getJietu() {
+		return jietu;
+	}
+	public void setJietu(String jietu) {
+		this.jietu = jietu;
+	}
+	public String getUpdate() {
+		return update;
+	}
+	public void setUpdate(String update) {
+		this.update = update;
+	}
+	public String getVersion() {
+		return version;
+	}
+	public void setVersion(String version) {
+		this.version = version;
+	}
+	@Override
+	public String toString() {
+		return "PlaySoft [id=" + id + ", softName=" + softName + ", softType=" + softType + ", softImage=" + softImage
+				+ ", softUrl=" + softUrl + ", soft_to_title=" + soft_to_title + ", jianjie=" + jianjie + ", jietu="
+				+ jietu + ", update=" + update + ", version=" + version + "]";
+	}
+	
+	
+	
+	
+
+}

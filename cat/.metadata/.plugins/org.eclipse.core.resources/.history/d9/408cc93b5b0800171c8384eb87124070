@@ -1,0 +1,32 @@
+$(function () {
+
+	$('#box').pagination({
+		total : 6,
+		pageSize : 5,
+		pageNumber : 0,
+		pageList : [1],
+		onSelectPage : function (pageNumber, pageSize) {
+			$('#box').pagination('loading');
+			$('#content').panel('refresh', 'getPartUser.do?PageNo='+pageNumber+'&PageSize='+pageSize);
+			setTimeout(function () {
+				$('#box').pagination('loaded');
+			}, 1000);
+			
+			
+		},
+	});
+
+});
+
+
+
+	
+
+
+
+
+
+
+
+
+

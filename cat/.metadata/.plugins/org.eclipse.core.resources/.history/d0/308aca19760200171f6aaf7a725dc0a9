@@ -1,0 +1,53 @@
+package controller;
+
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import dao.HomeworkDAO;
+
+import model.Homework;
+
+@Controller
+public class HomeworkController {
+	HomeworkDAO homeworkDAO;
+
+	public HomeworkDAO getHomeworkDAO() {
+		return homeworkDAO;
+	}
+	@Resource
+	public void setHomeworkDAO(HomeworkDAO homeworkDAO) {
+		this.homeworkDAO = homeworkDAO;
+	}
+	
+	//获取所有字段
+	@RequestMapping("/getHomework.do")
+	public void getHomework(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+		ArrayList<Homework> list=homeworkDAO.getHomework(cid)
+
+		
+		System.out.println(list);
+		request.setAttribute("data", list);
+		request.getRequestDispatcher("zyfz.jsp").forward(request, response);
+		return;    //跳转到bang.jsp页面，jsp已经补全
+	}
+	
+//	//获取类别字段
+//	@RequestMapping("/getCategory.do")
+//	@ResponseBody
+//	public ArrayList<Homework> getCategory(String category,HttpServletRequest request,HttpServletResponse response) throws Exception, IOException{
+//		ArrayList<Homework> list=homeworkDAO.getCategory();
+//		System.out.println(list);
+//		return list;
+//	}
+}

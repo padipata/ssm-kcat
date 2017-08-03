@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:xbl="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<binding id="textarea" extends="base.xml#base">
+		<content>
+			<html:textarea wd3_selection_help="resizer" anonid="anontextarea" class="custominput"></html:textarea>
+			<html:span style="display:none"><children/></html:span>
+		</content>
+		
+		<implementation>
+			<field name="inputImage">""</field>
+			
+			<method name="update">
+	    		<body><![CDATA[
+	    			var textarea = document.getAnonymousElementByAttribute(this, "anonid", "anontextarea");
+	    			this.cloneAttributes(this, textarea, new Array("rows", "cols"));
+					var val = this.getAttribute('value');
+					if (val != null) {
+						textarea.value = val;
+					} else {
+						textarea.value = "";
+					}
+	    			textarea.style.backgroundImage = "url(\"" + this.inputImage + "\")";
+	    		]]>
+	    		</body>
+	    	</method>
+		</implementation>
+		
+		<handlers>
+	    	<handler event="DOMAttrModified" phase="capturing">
+	    		event.stopPropagation();
+	    	</handler>
+	    </handlers>
+	</binding>
+	
+</bindings>

@@ -1,0 +1,72 @@
+
+.wd3_factionlistener {
+	-moz-binding: url('BINDINGS_URL/core.xml#actionListener');
+}
+	
+.wd3_fattribute {
+	-moz-binding: url('BINDINGS_URL/core.xml#attribute');
+}
+
+.wd3_fconvertdatetime {
+	-moz-binding: url('BINDINGS_URL/core.xml#convertDateTime');
+}
+
+.wd3_fconverter {
+	-moz-binding: url('BINDINGS_URL/core.xml#converter');
+}
+
+.wd3_fconvertnumber {
+	-moz-binding: url('BINDINGS_URL/core.xml#convertNumber');
+}
+
+.wd3_ffacet {
+	-moz-binding: url('BINDINGS_URL/core.xml#facet');
+}
+
+.wd3_floadbundle {
+	-moz-binding: url('BINDINGS_URL/core.xml#loadBundle');
+}
+
+.wd3_fparam {
+	-moz-binding: url('BINDINGS_URL/core.xml#param');
+}
+
+.wd3_fselectitem {
+	-moz-binding: url('BINDINGS_URL/core.xml#selectItem');
+}
+
+.wd3_fselectitems {
+	-moz-binding: url('BINDINGS_URL/core.xml#selectItems');
+}
+
+.wd3_fsubview {
+	-moz-binding: url('BINDINGS_URL/core.xml#subview');
+}
+
+.wd3_fvalidatedoublerange {
+	-moz-binding: url('BINDINGS_URL/core.xml#validateDoubleRange');
+}
+
+.wd3_fvalidatelength {
+	-moz-binding: url('BINDINGS_URL/core.xml#validateLength');
+}
+
+.wd3_fvalidatelongrange {
+	-moz-binding: url('BINDINGS_URL/core.xml#validateLongRange');
+}
+
+.wd3_fvalidator {
+	-moz-binding: url('BINDINGS_URL/core.xml#validator');
+}
+
+.wd3_fvaluechangelistener {
+	-moz-binding: url('BINDINGS_URL/core.xml#valueChangeListener');
+}
+
+.wd3_fverbatim {
+	-moz-binding: url('BINDINGS_URL/core.xml#verbatim');
+}
+
+.wd3_fview {
+	-moz-binding: url('BINDINGS_URL/core.xml#view');
+}

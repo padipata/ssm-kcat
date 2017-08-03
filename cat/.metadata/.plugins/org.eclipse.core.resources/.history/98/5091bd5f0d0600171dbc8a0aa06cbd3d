@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="jQuery/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		alert("aaaa");
+		$("#sub").click(function(){	
+			alert("1");
+			$.post("${pageContext.request.contextPath}/checkAdmin.do",function(data){
+				alert("执行完毕");
+			});
+
+		});
+	});
+</script>
+<body>
+<form method="post">
+	<table>
+		<tr>
+			<td></td><td></td>
+		</tr>
+		<tr><td><input type="button" id="sub" value="提交"></td></tr>
+		<div class="test"></div>
+	</table>
+</form>
+</body>
+</html>

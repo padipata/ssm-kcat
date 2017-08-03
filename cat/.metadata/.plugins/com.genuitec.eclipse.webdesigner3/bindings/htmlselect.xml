@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:xbl="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<binding id="select" extends="base.xml#base">
+		<content>
+			<html:select wd3_selection_help="resizer" anonid="anonselect" class="custominput strutsbgimage" style="padding-right: 12px;">
+				<html:option>html:option</html:option>
+				<html:option>html:options</html:option>
+				<html:option>html:optionsCollection</html:option>
+			</html:select>
+			<html:span style="display:none"><children/></html:span>
+		</content>
+		
+		<implementation>
+<!--			<field name="inputImage">"data:image/gif;base64,R0lGODlhEAAQAMZrAAAAAENvm150iVx6l0RyoWyFh2iDmmyHm2+MkWmRlG2WmnGHin+Rm3yXnWGBomKCo3aXoXWWp3eXqXWapXiUo3+Xo3qbp3iZrXyZq3Snp3eqqnirq3yvr3yosH2wsISWmYKanYaco4yoqIessY+jsYKxs4K1tYa5uYe6uoy/v5GirZClqJasrp+trJapsKKts6e3u6+3toanw4ew24q005+4yJDCwpDEw5LEw5DExJbIx5fJyZfKypvDwp3FxZvMzJzOzqDPz63ExafG26LQ0KfT06nU1K/X17DV1bba2bjV1bzd3b/d3avL4qHU/8DJyMXS08Dd3MPh4MXg4Mbj48fi4snk5Mvk5M/m5tDm5tPm5tLr69Tq6trt7dzr69/o6Nzu7uPx8eny8un09Ov39/D39/T5+fT7+vb6+vn8/GN2ef///////////////////////////////////////////////////////////////////////////////////yH+FUNyZWF0ZWQgd2l0aCBUaGUgR0lNUAAh+QQBAAB/ACwAAAAAEAAQAAAHj4B/goOEhYaHiIUuNYIkYmWIK1MtQ38qZ2iHGEpVWzBNL2hphzQsVFhaUF9lZogVUVdcYGFjZIQLDTJOIUxWWV1eTzGDFDZAPiJIS1JCDAIBBIMFNzxBRUdJHwYzhgNqOD9ERiAOiQ8IOkA9B4mCEDY7I9yHFxMdJSk5FokKGhwmJ1JISJQgwwYPJlBEOBQIADs="</field>-->
+			
+			<method name="update">
+	    		<body><![CDATA[
+	    			var select = document.getAnonymousElementByAttribute(this, "anonid", "anonselect");
+	    			this.cloneAttributes(this, select, new Array("size", "multiple"));
+					var size = this.getAttribute("size");
+					if (size != null && size > 1) {
+						select.style.backgroundPosition = "bottom left";
+						select.style.paddingRight = "0px";
+					} else {
+						select.style.backgroundPosition = "bottom right";
+						select.style.paddingRight = "12px";
+					}
+	    		]]>
+	    		</body>
+	    	</method>
+		</implementation>
+		
+		<handlers>
+	    	<handler event="DOMAttrModified" phase="capturing">
+	    		event.stopPropagation();
+	    	</handler>
+	    </handlers>
+	</binding>
+	
+</bindings>

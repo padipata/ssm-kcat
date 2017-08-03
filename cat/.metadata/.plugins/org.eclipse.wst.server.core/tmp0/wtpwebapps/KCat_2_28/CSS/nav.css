@@ -1,0 +1,282 @@
+/*顶部*/
+.topbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 58px;
+	background-color: rgba(0,0,0,0.8);
+	z-index: 9
+}
+.logo {
+	display: block;
+	width: 180px;
+	height: 58px;
+	cursor: pointer;
+	background: url(http://kcat-1251241286.cosgz.myqcloud.com/images/index/logo.png) no-repeat 0 center;
+	margin-right: 20px;
+}
+.header_search{
+	float: left;
+	padding: 16px 0 0 0px;
+}
+.icon-user{
+	position: absolute;
+	left: 0;
+	z-index:5;
+	background-image: url(../images/nav/search.png); 
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	width: 20px; 
+	height: 20px; 
+} 
+.header_search .search{
+	width: 270px;
+	height: 25px;
+	background: #FFFFFF;
+	font-size: 14px;
+	text-indent: 10px;
+	border: 1px solid #fec200;
+}
+
+#searchBox ul{
+	border-bottom: 1px solid #fec200;
+	border-left: 1px solid #fec200;
+	border-right: 1px solid #fec200;
+}
+#searchBox ul li {
+	width: 257px;
+	height: 30px;
+	background: #ffffff;
+	font-size: 15px; 
+	padding-left: 13px;
+	color: #000000;
+	line-height:30px; 
+}
+#searchBox ul a {
+	text-decoration: none;
+	color: #000000;
+}
+#searchBox ul a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+.ui-button-text{
+	width:30px;
+	height: 20px;
+}
+.header_button{
+	float: left;
+	padding: 17px 60px 0 5px;
+}
+.header_member{
+	float: right;
+	height: 58px;
+	line-height: 58px;
+	color: #FFFFFF;
+	width: 60px;
+}
+.header_member a{
+	font-size:14px;
+	color: #454545;
+	text-decoration: none;
+}
+
+#reg_a{
+	color: #FFFFFF;
+}
+#login_a{
+	color: #FFFFFF;
+}
+#member{
+	color: #FFFFFF;
+}
+#logout{
+	color: #FFFFFF;
+}
+/*更改jQuery UI主题的对话框header的背景*/
+
+/*更改dialog的title提示文字样式*/
+.ui-dialog-title{
+	color: #ffc200;
+	font-size: 15px;
+}
+/*更改日历小图标的位置*/
+.ui-datepicker-trigger{
+	margin-left: 5px;
+}
+
+.reg .reg_main{
+	padding-left: 95px;
+}
+.reg .reg_title{
+	font-size: 22px;
+	font-family:"微软雅黑";
+	font-weight:100;
+	color: #666666;
+	text-align:center;	
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #dddddd;
+}
+#login .reg_title_2{
+	font-size: 22px;
+	font-family: "微软雅黑";
+	font-weight:100;
+	color: #666666;
+	text-align:center;	
+	padding: 0 0 10px 0;
+	border-bottom: 1px solid #dddddd;
+}
+.reg_main_2{
+    padding-left: 40px;
+    padding-top: 20px;
+}
+.reg p{
+	margin: 12px 0;
+}
+.reg p label{
+	font-size: 14px;
+	color: #666666;
+}
+.reg .succ {
+	display:inline-block;
+	width:20px;
+	height: 15px;
+	background:url(../images/nav/reg_succ.png) no-repeat;
+}
+.reg p .star{
+	font-size: 15px;
+	color: indianred;
+	line-height: 24px;
+}
+.reg p .repassword{
+	border-radius:4px;
+	border:1px solid #ccc;
+	background:#fff;
+	width:322px;
+	height:40px;
+	line-height:25px;
+	text-indent:15px;
+	font-size:17px;
+	color:#666;
+}
+/*改变注册表单工具提示样式*/
+.ui-tooltip{
+	color: indianred;
+}
+/*更改自动补全的字体样式*/
+.ui-menu-item{
+	font-size:17px;
+	text-indent:7px;
+}
+/*更改自动补全的鼠标悬停样式*/
+.ui-menu .ui-menu-item a.ui-state-focus{
+	background: #FFC200;
+}
+.ui-widget-header{
+	display: none;
+}
+/*填写信息错误*/
+.reg_error{
+	margin: 0;
+	padding: 0;
+	color : red;
+	margin-left: 12px;
+}
+.error{
+	height: 20px;
+}
+#loading {
+	background:url(../images/nav/loading.gif) no-repeat 20px center;
+	line-height:28px;
+	font-size:14px;
+	font-weight:bold;
+	text-indent:40px;
+	color:#666;
+}
+#loading {
+	background:url(../images/nav/error.png) no-repeat 20px center;
+	line-height:28px;
+	font-size:14px;
+	font-weight:bold;
+	text-indent:40px;
+	color:#666;
+}
+#reg,#login {
+	padding:15px 0 0 0px;
+}
+#reg p,#login p {
+	margin:20px 0;
+	padding:0;
+}
+#reg p label,#login p label {
+	font-size:15px;
+	font-family:"微软雅黑";
+	font-weight:100;
+	color:#666;
+}
+#reg .star,#login .star {
+	font-size:14px;
+	color:maroon;
+}
+#reg .succ,#login .succ {
+	display:inline-block;
+	line-height: 14px;
+	width:28px;
+	background:url(../images/nav/reg_succ.png) no-repeat;
+}
+#reg ol,#login ol {
+	margin:0;
+	padding:0 0 0 20px;
+	color:maroon;
+}
+#reg ol li,#login ol li {
+	height:20px;
+}
+#reg .text,#login .text {
+	border-radius:4px;
+	border:1px solid #ccc;
+	background-color:#fff;
+	background:#fff;
+	width:350px;
+	height:40px;
+	line-height:25px;
+	text-indent: 15px;
+    font-size: 17px;
+	color:#666;
+}
+#expires {
+	position:relative;
+	margin: 0 5px 0 260px;
+}
+
+.topnav {
+	width: 600px;
+}
+.topnav li {
+	display: inline;
+}
+.topnav li a {
+	display: inline-block;
+	height: 58px;
+	line-height: 58px;
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+	padding: 0 15px;
+}
+.topnav li a:hover, .topnav li a.active, .topnav li.current a {
+	color: #2b2b2b;
+	text-decoration: none;
+	background-color: #faba00
+}
+.userbar, .userbar a {
+	font-size: 14px;
+	line-height: 58px;
+	color: #a8a8a8;
+	text-decoration: none
+}
+.userbar a:hover {
+	color: #fff
+}

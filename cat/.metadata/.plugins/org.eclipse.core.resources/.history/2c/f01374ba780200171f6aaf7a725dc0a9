@@ -1,0 +1,45 @@
+package dao;
+
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
+
+import mapper.HomeworkMapper;
+import model.BangTitle;
+import model.Homework;
+
+@Component
+public class HomeworkDAO {
+	HomeworkMapper homeworkMapper;
+
+	public HomeworkMapper getHomeworkMapper() {
+		return homeworkMapper;
+	}
+	@Resource
+	public void setHomeworkMapper(HomeworkMapper homeworkMapper) {
+		this.homeworkMapper = homeworkMapper;
+	}
+	public
+	
+	//获取整个内容信息
+	public ArrayList<Homework> getHomework(int cid){
+		System.out.println("进入了DAO");
+//		int cid_count = homeworkMapper.getCid();
+		ArrayList<Homework> list = home;
+//		for (int i = 1; i <= cid_count; i++) {
+//			list = homeworkMapper.getHomework();
+//		}
+		
+		
+		System.out.println("传出数据"+list.size());
+		return list;
+	}
+	//获取分类字段
+//	public ArrayList<Homework> getCategory(){
+//		ArrayList<Homework> list=homeworkMapper.getCategory();
+//		return list;
+//	}
+
+}

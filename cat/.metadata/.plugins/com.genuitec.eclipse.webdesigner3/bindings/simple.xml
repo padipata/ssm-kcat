@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<binding id="simple" extends="util.xml#util">
+		<resources>
+			<stylesheet src="styles.css"/>
+		</resources>
+		
+		<implementation>
+		
+			<constructor>
+				this.setAttribute("wd3_isContainer", "false");
+				this.update();
+	    	</constructor>
+	    	
+	    	<method name="update">
+	    		<body>
+	    		</body>
+	    	</method>
+	    	
+		</implementation>
+	</binding>
+</bindings>

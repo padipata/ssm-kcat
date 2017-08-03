@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<binding id="actionListener" extends="suppress.xml#suppress"/>
+	<binding id="attribute" extends="suppress.xml#suppress"/>
+	<binding id="convertDateTime" extends="suppress.xml#suppress"/>
+	<binding id="converter" extends="suppress.xml#suppress"/>
+	<binding id="convertNumber" extends="suppress.xml#suppress"/>
+	
+	<binding id="facet" extends="emptycontainer.xml#block"/>
+	
+	<binding id="loadBundle" extends="suppress.xml#suppress"/>
+	<binding id="param" extends="suppress.xml#suppress"/>
+	<binding id="selectItem" extends="suppress.xml#suppress"/>
+	<binding id="selectItems" extends="suppress.xml#suppress"/>
+	
+	<binding id="subview" extends="emptycontainer.xml#block"/>
+	
+	<binding id="validateDoubleRange" extends="suppress.xml#suppress"/>
+	<binding id="validateLength" extends="suppress.xml#suppress"/>
+	<binding id="validateLongRange" extends="suppress.xml#suppress"/>
+	<binding id="validator" extends="suppress.xml#suppress"/>
+	<binding id="valueChangeListener" extends="suppress.xml#suppress"/>
+	
+	<binding id="verbatim" extends="emptycontainer.xml#inline"/>
+	<binding id="view" extends="emptycontainer.xml#block"/>
+	
+</bindings>

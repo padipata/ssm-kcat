@@ -1,0 +1,67 @@
+package model;
+
+public class Ylsoftware {
+	private int id;
+	private int cid;
+	private String category;
+	private String softname;
+	private String softType;
+	private String softImage;
+	private String softUrl;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getCid() {
+		return cid;
+	}
+
+	public void setCid(int cid) {
+		this.cid = cid;
+	}
+
+	public String getSoftName() {
+		return softName;
+	}
+
+	public void setSoftName(String softName) {
+		this.softName = softName;
+	}
+
+	public String getSoftType() {
+		return softType;
+	}
+
+	public void setSoftType(String softType) {
+		this.softType = softType;
+	}
+
+	public String getSoftImage() {
+		return softImage;
+	}
+
+	public void setSoftImage(String softImage) {
+		this.softImage = softImage;
+	}
+
+	public String getSoftUrl() {
+		return softUrl;
+	}
+
+	public void setSoftUrl(String softUrl) {
+		this.softUrl = softUrl;
+	}
+
+	@Override
+	public String toString() {
+		return "Homework [id=" + id + ",cid=" + cid + ",category=" + category + ", softname=" + softname + ", images=" + images + ", link="
+				+ link + "]";
+	}
+	
+
+}

@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+		  
+	<binding id="column" extends="emptycontainer.xml#block"/>
+	
+	<binding id="commandButton" extends="commandButton.xml#commandButton"/>
+	
+	<binding id="commandLink" extends="link.xml#link">
+	    <implementation>
+	    	<property name="customStyle">
+	    		<getter><![CDATA[
+	    			return "background-image: url('data:image/gif;base64,R0lGODlhEAAQAMZNAFqOvFGLu1eNvF2VxF+Ww2aZxWeaxU+Lu1mVw2GYxHKmznqs0nmqz5/G5EWOwVCSwmGgzWun0XOr0oK74Y/F6a/T7GCm02Olz2+s1IK74IvC5JDF6JrL6pjH5kmq31ux42W25HC44XO85nq74n/B54TF6YXE6Y3H6bLa8jmm3jqm3jmm3Uiq30mr4FWu21qz4lu141y04Wu85m+43XfA54XH6Rad2Rec2Rie2Sul3DWq3kKr3kKs3kOs3VG241O241Kz4XLB5nfB5QCY1gGX1gea1xif2B2h2kGy4Uy04FK341u54bvT1v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAH8ALAAAAAAQABAAAAe4gH+Cg4SFhRIMBQAABQwShn8LBhMNFRUNEwYLhwodHBugGxwdCo+CEgkaJCdNra0kGgmmDBhCMTWurTFCGAyCDzNAPEGtOz09PEAzD4IBS0dGSq0/OjhGR0sBggdJRURIuUNERUkHgg4uOTc+uTY3OS4OggwWMCsyrSopKiswFr5/JCAI8YJGKxYeWrwIgcDUnwsQRphAUeIDCBEjIFwoFIEAgwwUKExgQCACJEQDBAgY4AiSy0KBAAA7')";
+	    		]]></getter>
+	    	</property>	
+	    </implementation>
+	</binding>
+	
+	<binding id="dataTable" extends="labelcontainer.xml#container">
+		<implementation>
+			<field name="shouldUseLabel">true</field>
+			<property name="labelText"><getter><![CDATA[
+				return "<" + this.getAttribute("wd3_tagname") + "> - Can not render.";
+				]]></getter>
+			</property>
+			<property name="labelStyle"><getter><![CDATA[
+				return "font-style: italic";
+				]]></getter>
+			</property>
+			<property name="customStyle"><getter><![CDATA[
+				return "border: 1px dashed #0000FF !important;";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="form" extends="labelcontainer.xml#container">
+		<implementation>
+			<property name="customStyle">
+				<getter><![CDATA[
+					var customCss = 
+						" border: 1px dashed #0000FF !important;" +
+						" background-position: top left !important;"+
+						" background-repeat: no-repeat !important;" +
+						" background-image: url(\"data:image/gif;base64,R0lGODlhEAAQAMZNAFqOvFGLu1eNvF2VxF+Ww2aZxWeaxU+Lu1mVw2GYxHKmznqs0nmqz5/G5EWOwVCSwmGgzWun0XOr0oK74Y/F6a/T7GCm02Olz2+s1IK74IvC5JDF6JrL6pjH5kmq31ux42W25HC44XO85nq74n/B54TF6YXE6Y3H6bLa8jmm3jqm3jmm3Uiq30mr4FWu21qz4lu141y04Wu85m+43XfA54XH6Rad2Rec2Rie2Sul3DWq3kKr3kKs3kOs3VG241O241Kz4XLB5nfB5QCY1gGX1gea1xif2B2h2kGy4Uy04FK341u54bvT1v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAH8ALAAAAAAQABAAAAe4gH+Cg4SFhRIMBQAABQwShn8LBhMNFRUNEwYLhwodHBugGxwdCo+CEgkaJCdNra0kGgmmDBhCMTWurTFCGAyCDzNAPEGtOz09PEAzD4IBS0dGSq0/OjhGR0sBggdJRURIuUNERUkHgg4uOTc+uTY3OS4OggwWMCsyrSopKiswFr5/JCAI8YJGKxYeWrwIgcDUnwsQRphAUeIDCBEjIFwoFIEAgwwUKExgQCACJEQDBAgY4AiSy0KBAAA7\") !important;"+
+						" padding-top: 16px !important;" +
+						" padding-left: 3px !important;" +
+						" padding-bottom: 3px !important;" +
+						" padding-right: 4px !important;";
+					return customCss;					
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="graphicImage" extends="graphicImage.xml#graphicImage"/>
+	
+	<binding id="inputHidden" extends="inputHidden.xml#hidden">
+		<implementation>
+			<property name="customStyle">
+				<getter><![CDATA[
+					var css = 
+						" background-position: bottom right !important;"+
+						" padding-right: 5px;"+
+						" background-repeat: no-repeat !important;" +
+						" background-image: url(\"data:image/gif;base64,R0lGODlhEAAQAMZNAFqOvFGLu1eNvF2VxF+Ww2aZxWeaxU+Lu1mVw2GYxHKmznqs0nmqz5/G5EWOwVCSwmGgzWun0XOr0oK74Y/F6a/T7GCm02Olz2+s1IK74IvC5JDF6JrL6pjH5kmq31ux42W25HC44XO85nq74n/B54TF6YXE6Y3H6bLa8jmm3jqm3jmm3Uiq30mr4FWu21qz4lu141y04Wu85m+43XfA54XH6Rad2Rec2Rie2Sul3DWq3kKr3kKs3kOs3VG241O241Kz4XLB5nfB5QCY1gGX1gea1xif2B2h2kGy4Uy04FK341u54bvT1v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAH8ALAAAAAAQABAAAAe4gH+Cg4SFhRIMBQAABQwShn8LBhMNFRUNEwYLhwodHBugGxwdCo+CEgkaJCdNra0kGgmmDBhCMTWurTFCGAyCDzNAPEGtOz09PEAzD4IBS0dGSq0/OjhGR0sBggdJRURIuUNERUkHgg4uOTc+uTY3OS4OggwWMCsyrSopKiswFr5/JCAI8YJGKxYeWrwIgcDUnwsQRphAUeIDCBEjIFwoFIEAgwwUKExgQCACJEQDBAgY4AiSy0KBAAA7\") !important;";
+					return css;
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="inputSecret" extends="jsfinput.xml#inputSecret"/>
+	
+	<binding id="inputText" extends="jsfinput.xml#inputText"/>
+	
+	<binding id="inputTextarea" extends="textarea.xml#textarea">
+		<implementation>
+			<field name="inputImage">"data:image/gif;base64,R0lGODlhEAAQAMZNAFqOvFGLu1eNvF2VxF+Ww2aZxWeaxU+Lu1mVw2GYxHKmznqs0nmqz5/G5EWOwVCSwmGgzWun0XOr0oK74Y/F6a/T7GCm02Olz2+s1IK74IvC5JDF6JrL6pjH5kmq31ux42W25HC44XO85nq74n/B54TF6YXE6Y3H6bLa8jmm3jqm3jmm3Uiq30mr4FWu21qz4lu141y04Wu85m+43XfA54XH6Rad2Rec2Rie2Sul3DWq3kKr3kKs3kOs3VG241O241Kz4XLB5nfB5QCY1gGX1gea1xif2B2h2kGy4Uy04FK341u54bvT1v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAH8ALAAAAAAQABAAAAe4gH+Cg4SFhRIMBQAABQwShn8LBhMNFRUNEwYLhwodHBugGxwdCo+CEgkaJCdNra0kGgmmDBhCMTWurTFCGAyCDzNAPEGtOz09PEAzD4IBS0dGSq0/OjhGR0sBggdJRURIuUNERUkHgg4uOTc+uTY3OS4OggwWMCsyrSopKiswFr5/JCAI8YJGKxYeWrwIgcDUnwsQRphAUeIDCBEjIFwoFIEAgwwUKExgQCACJEQDBAgY4AiSy0KBAAA7"</field>
+		</implementation>
+	</binding>
+	
+	<binding id="message" extends="tagNameLabel.xml#inline">
+		<implementation>
+			<field name="_display">"block"</field>
+			<property name="labelText"><getter><![CDATA[
+				var forattr = this.getAttribute('for');
+				if (forattr != null) {
+					return  '<' + this.getAttribute("wd3_tagname") + ' ('+ this.getAttribute('for') + ')>';
+				} else {
+					return '<' + this.getAttribute("wd3_tagname") + '>';
+				}
+				]]></getter>
+			</property>
+			<property name="customStyle">
+				<getter><![CDATA[
+					return "color: blue; border: 1px dashed blue; white-space: nowrap";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>	
+	
+	<binding id="messages" extends="tagNameLabel.xml#block">
+		<implementation>
+			<field name="_display">"block"</field>
+			<property name="customStyle">
+				<getter><![CDATA[
+					return "color: blue; border: 1px dashed blue; white-space: nowrap";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>	
+	
+	<binding id="outputLabel" extends="outputLabel.xml#outputLabel"/>
+	
+	<binding id="outputLink" extends="link.xml#link">
+	    <implementation>
+	    	<property name="customStyle">
+	    		<getter><![CDATA[
+	    			return " border: 1px dashed green !important; " +
+	    				" background-image: url('data:image/gif;base64,R0lGODlhEAAQAMZNAFqOvFGLu1eNvF2VxF+Ww2aZxWeaxU+Lu1mVw2GYxHKmznqs0nmqz5/G5EWOwVCSwmGgzWun0XOr0oK74Y/F6a/T7GCm02Olz2+s1IK74IvC5JDF6JrL6pjH5kmq31ux42W25HC44XO85nq74n/B54TF6YXE6Y3H6bLa8jmm3jqm3jmm3Uiq30mr4FWu21qz4lu141y04Wu85m+43XfA54XH6Rad2Rec2Rie2Sul3DWq3kKr3kKs3kOs3VG241O241Kz4XLB5nfB5QCY1gGX1gea1xif2B2h2kGy4Uy04FK341u54bvT1v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAH8ALAAAAAAQABAAAAe4gH+Cg4SFhRIMBQAABQwShn8LBhMNFRUNEwYLhwodHBugGxwdCo+CEgkaJCdNra0kGgmmDBhCMTWurTFCGAyCDzNAPEGtOz09PEAzD4IBS0dGSq0/OjhGR0sBggdJRURIuUNERUkHgg4uOTc+uTY3OS4OggwWMCsyrSopKiswFr5/JCAI8YJGKxYeWrwIgcDUnwsQRphAUeIDCBEjIFwoFIEAgwwUKExgQCACJEQDBAgY4AiSy0KBAAA7')";
+	    		]]></getter>
+	    	</property>	
+	    </implementation>
+	</binding>
+	
+	<binding id="outputText" extends="text.xml#text">
+		<implementation>
+			<property name="labelText">
+				<getter><![CDATA[
+	    			return this.getAttribute('value');
+	    		]]></getter>
+			</property>
+			<property name="customStyle">
+				<getter><![CDATA[
+					return 	" border: 1px dashed green !important; " +
+	    					" white-space: nowrap !important;";
+	    		]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="outputFormat" extends="text.xml#text">
+		<implementation>
+			<property name="labelText">
+				<getter><![CDATA[
+	    			return this.getAttribute('value');
+	    		]]></getter>
+			</property>
+			<property name="customStyle">
+				<getter><![CDATA[
+					return 	" border: 1px dashed green !important; " +
+	    					" white-space: nowrap !important;";
+	    		]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="panelGrid" extends="labelcontainer.xml#container">
+		<implementation>
+			<field name="shouldUseLabel">true</field>
+			<property name="labelText"><getter><![CDATA[
+				return "<" + this.getAttribute("wd3_tagname") + "> - Can not render.";
+				]]></getter>
+			</property>
+			<property name="labelStyle"><getter><![CDATA[
+				return "font-style: italic";
+				]]></getter>
+			</property>
+			<property name="customStyle"><getter><![CDATA[
+				return "border: 1px dashed #0000FF !important;";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="panelGroup" extends="emptycontainer.xml#inline"/>
+	
+	<binding id="selectBooleanCheckbox" extends="booleanCheckbox.xml#booleanCheckbox"/>
+	
+	<binding id="selectManyCheckbox" extends="manyCheckbox.xml#manyCheckbox"/>
+	
+	<binding id="selectOneRadio" extends="oneRadio.xml#oneRadio"/>
+	
+	<binding id="selectManyListbox" extends="selectManyListbox.xml#select">
+	</binding>
+
+	<binding id="selectOneListbox" extends="selectOneListbox.xml#select">
+	</binding>
+	
+	<binding id="selectOneMenu" extends="selectOneMenu.xml#select">
+	</binding>	
+	
+	<binding id="selectManyMenu" extends="selectManyMenu.xml#select">
+	</binding>	
+		
+</bindings>

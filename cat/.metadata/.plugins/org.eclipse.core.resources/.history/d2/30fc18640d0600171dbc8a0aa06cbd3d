@@ -1,0 +1,147 @@
+
+.des {
+	width: 500px;
+	background-color: lightyellow;
+	border: 1px solid #555;
+	padding: 25px;
+	margin-top: 25px;
+	font-size:12px;
+}
+/*涓嬫媺妗嗕腑鐨勯紶鏍囦簨浠�*/
+.mouseover {
+	color: #ffffff;
+	background-color: highlight;
+	width: 100%;
+	cursor: default;
+}
+.mouseout {
+	color: #000;
+	width: 100%;
+	background-color: #ffffff;
+	cursor: default;
+}
+*{ padding:0; margin:0; font-size:15px;list-style:none;text-decoration: none;color:#666;}
+body{font-family:"\5FAE\8F6F\96C5\9ED1","Microsoft Yahei","Hiragino Sans GB",tahoma,arial,"\5B8B\4F53";font-size:12px;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased}
+
+/*瀵艰埅*/
+.wp {
+	width: 1250px;
+	margin: 0 auto;
+}
+.topbar{ position:fixed; top:0; left:0; right:0; width:100%; height:58px; background-color:rgba(0,0,0,0.8);z-index:9}
+.topbar .juli{ background-color:#faba00;color:#000} 
+.topbar .nav{margin:0 auto;height:58px;width:977px;}
+.wp .logo1{display:block; width:180px; height:58px; cursor:pointer; background:url(images/logo.png) no-repeat 0 center; margin-right:330px; float:left;}
+.topnav{ width:720px; float:right;}
+.topnav li{ display:inline;}
+.topnav li a{ display:inline-block; height:58px; line-height:58px; font-size:14px; color:#fff; text-decoration:none; padding:0 15px;}
+.topnav li a:hover,.topnav li a.active,.topnav li.current a{ color:#2b2b2b; text-decoration:none; background-color:#faba00}
+.userbar,.userbar a{ font-size:14px; line-height:58px; color:#a8a8a8; text-decoration:none}
+.userbar a:hover{ color:#fff;}
+/*瀵艰埅end*/
+
+/*灏忓鑸� start*/
+
+.nav_b{width:1000px;height:40px;}
+.nav_b ul li{float:left;}
+.nav_b ul .xueyuan{
+	height: 40px;
+	display: block;
+	padding: 0 20px;
+	font-size: 18px;
+	font-weight:bold;
+	color:#000;	
+	}
+/*灏忓鑸猠nd*/	
+
+
+/*main  start*/
+.hr{
+	width:95%;
+	height:1px;
+	background:center center repeat;
+	margin-top:5px;
+	}
+.all{
+	width:1160px;
+	height:auto;
+	margin:58px auto 0;
+	}
+.pho{
+	height:300px;
+	width:1160px;
+	background:#9C9;
+	}	
+.main{
+	width:1160px;
+	height:auto;
+	}
+.main .zuo{
+	width:920px;
+	height:auto;
+	float:left;
+	}
+.main .zuo .big{
+	color:#000;
+	}
+.main .you{
+	width:190px;
+	height:auto;
+	float:right;
+	margin-top:25px;
+	}
+.main .you p{
+	line-height:2.5em;
+	color:d7d7d7;
+	font-size:12px;
+	margin-left:10px;
+	}
+.main .you p a:hover{ color:#faba00;}
+.main .you .kslj{
+	font-size:14px;
+	font-weight:bold;
+	}
+.main .you ul li{
+	font-size:10px;
+	color:#000;
+	line-height:1.5em;
+	text-indent:2em;
+	font-weight:bold;
+	}
+.main .zhuanye{
+	width:945px;
+	height:auto;
+	float:left;
+	margin-bottom:30px;
+	}
+.main .zhuanye .ruanjian{
+	width:210px;
+	height:80px;
+	float:left;
+	margin-top:20px;
+	margin-right:20px;
+	}	
+.main .zhuanye .ruanjian img{
+	float:left;
+	margin-right:12px;
+	width:60px;
+	height:60px;
+	}
+.main .zhuanye .ruanjian .big{ 
+	font-size:14px;
+	}
+.main .zhuanye .ruanjian .small{ 
+	font-size:12px;
+	color:#999;
+	}
+.main .zhuanye .ruanjian .xiazai{
+	width:40px;
+	height:13px;
+	margin-top:10px;
+	}
+/*main end*/
+
+
+
+
+

@@ -1,0 +1,69 @@
+body{
+	font-family: "microsoft yahei",sans-serif;
+	padding-top: 70px;
+}
+/*进度条*/
+.panel-body .progress {
+	margin-bottom: 15px;	
+}	
+/*留言板*/
+.ph64{
+	width: 64px;
+	height:64px;
+	border-radius:50% ;	
+}
+.mar_t15{
+	margin-top: 15px;
+}
+.mar_b15{
+	margin-bottom: 15px;
+}
+.pad0{
+	padding: 0;
+}
+.mar_l40{
+	margin-left: 40px;
+}
+/*用户列表标题文字*/
+.page-header {
+	margin-top: 0;	
+}
+.page-header h1{
+	margin: 0;
+	font-size: 16px;	
+}
+/*搜索表单边框*/
+.user_search{
+	padding: 10px;
+	border: solid 1px #ddd;
+	border-top:none ;
+	
+}
+/*标签*/
+.taglist{
+	padding-top: 15px;
+}
+.taglist .alert{
+	margin: 0 15px 15px 0;
+}
+#id_width{
+	width: 109px;
+}
+#name_width{
+	width:168px;
+}
+#email_width{
+	width:252px;
+}
+#password_width{
+	width:150px;
+}
+#sex_width{
+	width:110px;
+}
+/*footer*/
+footer{
+	font-weight: 400;
+	text-align: center;
+	padding: 20px;
+}

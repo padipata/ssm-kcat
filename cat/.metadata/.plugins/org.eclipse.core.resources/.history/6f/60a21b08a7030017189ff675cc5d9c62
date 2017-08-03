@@ -1,0 +1,17 @@
+<%@ page contentType="text/html; charset=UTF-8" language="java" errorPage="" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<div class="topbar">
+    	<div class="wp">
+            <a href="#" target="_parent">
+            	<div class="logo1"></div>
+            </a>
+            <ul class="topnav l">
+                <li class="current"><a style="display:none"></a></li> 		
+                <li><a  href="#">专业软件</a></li>
+                <li><a href="#">娱乐软件</a></li>
+                <li><a href="#">作业辅助</a></li>
+                <li><a class="juli";href="#">帮帮帮</a></li>
+                <li><a href="#">校园电话</a></li>
+            </ul>
+  		</div>
+	</div>

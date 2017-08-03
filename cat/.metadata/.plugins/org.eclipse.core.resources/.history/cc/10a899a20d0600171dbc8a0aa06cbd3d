@@ -1,0 +1,37 @@
+package dao;
+
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
+
+import mapper.FirstMapper;
+import model.First;
+@Component
+public class FirstDAO {
+	FirstMapper firstMapper;
+
+	public FirstMapper getFirstMapper() {
+		return firstMapper;
+	}
+	@Resource
+	public void setFirstMapper(FirstMapper firstMapper) {
+		this.firstMapper = firstMapper;
+	}
+//检查用户名和密码
+	public ArrayList<First> login(First first){
+		ArrayList<First> list=firstMapper.login(first);
+		return list;
+	}
+//检查用户名
+	public ArrayList<First> checkUser(First first){
+		ArrayList<First> list=firstMapper.checkUser(first);
+		return list;
+	}
+//添加用户
+	public void addUser(First first){
+		firstMapper.addUser(first);
+	}
+	
+}

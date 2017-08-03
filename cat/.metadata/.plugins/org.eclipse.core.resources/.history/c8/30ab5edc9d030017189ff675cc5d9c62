@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>下载页面</title>
+<link rel="Shortcut Icon" href="images/tubiao.ico">
+<link rel="stylesheet" type="text/css" href="style/yuleruanjian.css"/>
+
+</head>
+
+<body>
+<div class="all">
+	<div class="topbar">
+	  <div class="wp">
+   		<a href="index.html" target="_parent"><div class="logo1"></div></a>
+    	<ul id="nav" class="topnav l">
+    	  <li class="current"><a style="display:none"></a></li> 		
+          <li><a href="zhuanyeruanjian.html">专业软件</a></li>
+          <li><a class="juli" >娱乐软件</a></li>
+      		<li><a href="zuoyefuzhu.html">作业辅助</a></li>
+      		<li><a href="bangbangbang.html">帮帮帮</a></li>
+      		<li><a href="xiaoyuandianhua.html">校园电话</a></li>
+            <div id="divc"> </div>
+
+    
+        </ul>
+      </div>
+	</div>
+    
+    <div class="main">
+    	<div class="left">
+<!--box内容s-->
+
+<c:set value="0" var="a"/><!-- 定义一个变量a，初次赋值为0 -->
+<c:forEach items="${data}" var="d">
+<c:if test="${d.cid > a}"><!-- 判断cid的值比a大才执行，为了实现分类名字只输出一次 -->
+	<div class="box">
+            	<div class="shang">${d.category }</div>
+                <div class="xia">
+		<c:set value="${d.cid}" var="a" /><!-- 输完一次分类名就把当前的cid赋值给a -->
+</c:if>
+	<div class="ruanjian">
+                	 <a href="download.html?id=41" target="_blank"><img class="logo" src="images/ylrj/${d.cid}/${d.softimage}" ></img></a>
+                         <div class="ming"><a href="download.html?id=41" target="_blank">${d.softname }</a></div>
+                         <div class="fenlei">yinyue</div>
+                         <a href="download.html?id=41" target="_blank"> <a href="download.html?id=29" target="_blank"><img class="huoqu" src="images/ylrj/bxiazai.png"></img></a></a>
+                </div>
+                    
+                </div>
+            </div>
+  </c:forEach>
+<!--box内容e-->
+
+    
+<!--尾部部分start-->
+
+<!--尾部部分end-->
+</div>
+
+</body>
+</html>

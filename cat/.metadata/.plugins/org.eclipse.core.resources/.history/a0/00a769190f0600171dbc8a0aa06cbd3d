@@ -1,0 +1,9 @@
+package model;
+
+public class Admin {
+	private int id;
+	private char manager;
+	private char password;
+	private char create;
+
+}

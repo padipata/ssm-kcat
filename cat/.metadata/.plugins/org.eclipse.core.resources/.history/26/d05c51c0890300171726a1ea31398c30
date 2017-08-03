@@ -1,0 +1,11 @@
+package mapper;
+
+import java.util.ArrayList;
+
+import model.Homework;
+import model.Ylsoftware;
+
+public interface YlsoftwareMapper {
+	public int getCid();
+	public ArrayList<Ylsoftware> getYlsoftware();
+}

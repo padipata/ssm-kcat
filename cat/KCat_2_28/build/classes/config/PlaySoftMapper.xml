@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper  namespace="mapper.PlaySoftMapper">
+	<select id="getPlaySoft" parameterType="int" resultType="model.PlaySoft" >
+		select id,softName,softType,softImage,softUrl,soft_to_title from ylSoftware where soft_to_title =#{tid}
+	</select>
+	
+	<select id="getPlaySoft_All" parameterType="int" resultType="model.PlaySoft" >
+		select * from ylSoftware where id=#{id}
+	</select>
+	
+	<select id="getPlaySoft_title"  resultType="model.PlaySoft_title" >
+		select * from ylSoftware_title
+	</select>
+	
+	<insert id="uploadPlay" parameterType="model.PlaySoft">
+		insert into ylSoftware (softName,softType,softImage,softUrl,soft_to_title) values (#{softName},#{softType},#{softImage},#{softUrl},#{soft_to_title})   
+	</insert>
+
+</mapper>

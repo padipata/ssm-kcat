@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<binding id="attribute" extends="tagNameLabel.xml#inline"/>
+	
+	<binding id="declaration" extends="blocklabel.xml#label">
+		<implementation>
+			<property name="labelText"><getter><![CDATA[
+				return "<%@!" + this.getBoundChildText() + "%>";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="directive.include" extends="blocklabel.xml#label">
+		<implementation>
+			<property name="labelText"><getter><![CDATA[
+				var file = this.getAttribute("file") + '';
+				return "<%@ include (\"" + file + "\") %>";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="directive.page" extends="blocklabel.xml#label">
+		<implementation>	
+			<property name="labelText"><getter><![CDATA[
+				return "<%@ page %>";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="directive.taglib" extends="blocklabel.xml#label">
+		<implementation>
+			<property name="labelText"><getter><![CDATA[
+				var file = this.getAttribute("prefix") + '';
+				return "<%@ taglib (\"" + file + "\") %>";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+		
+	<binding id="expression" extends="inlinelabel.xml#label">
+		<implementation>
+			<property name="labelText"><getter><![CDATA[
+				return "<%=" + this.getBoundChildText() + "%>";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="fallback" extends="tagNameLabel.xml#inline"/>
+	
+	<binding id="forward" extends="blocklabel.xml#label">
+		<implementation>	
+			<property name="labelText"><getter><![CDATA[
+				var page = this.getAttribute("page") + '';
+				return "<jsp:forward (\"" + page + "\")>";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="getproperty" extends="tagNameLabel.xml#inline"/>
+	
+	<binding id="include" extends="blocklabel.xml#label">
+		<implementation>	
+			<property name="labelText"><getter><![CDATA[
+				var page = this.getAttribute("page") + '';
+				return "<jsp:include (\"" + page + "\")>";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="param" extends="tagNameLabel.xml#inline"/>
+	
+	<binding id="params" extends="tagNameLabel.xml#inline"/>
+	
+	<binding id="plugin" extends="tagNameLabel.xml#inline"/>
+	
+	<binding id="root" extends="emptycontainer.xml#block"/>
+	
+	<binding id="scriptlet" extends="blocklabel.xml#label">
+		<implementation>
+			<property name="labelText"><getter><![CDATA[
+				return "<%" + this.getBoundChildText() + "%>";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+	<binding id="setproperty" extends="tagNameLabel.xml#inline"/>
+	
+	<binding id="text" extends="emptycontainer.xml#block"/>
+	
+	<binding id="usebean" extends="inlinelabel.xml#label">
+		<implementation>	
+			<property name="labelText"><getter><![CDATA[
+				var bean = this.getAttribute("beanName") + '';
+				return "<jsp:useBean (" + bean + ")>";
+				]]></getter>
+			</property>
+		</implementation>
+	</binding>
+	
+</bindings>

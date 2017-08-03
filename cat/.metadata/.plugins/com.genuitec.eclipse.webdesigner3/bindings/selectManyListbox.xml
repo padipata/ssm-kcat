@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:xbl="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<binding id="select" extends="base.xml#base">
+		<content>
+			<html:select wd3_selection_help="resizer" anonid="select1" size="3" multiple="true" class="wd3_manylistbox">
+				<html:option>f:selectItem</html:option>
+				<html:option>f:selectItems</html:option>
+			</html:select><html:img src="img/select.gif"/><html:span style="display:none"><children/></html:span>
+		</content>
+		
+	    <implementation>
+	    	<method name="update">
+	    		<body><![CDATA[
+	    			var select1 = document.getAnonymousElementByAttribute(this, "anonid", "select1");
+	    			this.cloneAttributes(this, select1, new Array("size"));
+	    		]]>
+	    		</body>
+	    	</method>
+	    </implementation>
+	    
+	    <handlers>
+	    	<handler event="DOMAttrModified" phase="capturing">
+	    		event.stopPropagation();
+	    	</handler>
+	    </handlers>
+	</binding>
+	
+</bindings>

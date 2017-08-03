@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:xbl="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<binding id="commandButton" extends="base.xml#base">
+		<content>
+			<html:input wd3_selection_help="resizer" type="button" anonid="anonbutton" class="custombutton jsfbgimage" 
+			/><html:input wd3_selection_help="resizer" type="image" src="img/jsf.gif" anonid="anonimage" 
+			/><html:span style="display:none"><children/></html:span>
+	    </content>
+	    
+	    <implementation>
+	    	<field name="defaultButtonText">""</field>
+	    	<field name="buttonImage">""</field>
+	    	
+	    	<field name="_buttonText">""</field>
+	    	<property name="buttonText">
+	    		<getter>
+	    			return this._buttonText;
+	    		</getter>
+	    	</property>
+	    	
+	    	<field name="_renderedURL">""</field>
+	    	<property name="wd3_renderedURL">
+	    		<getter><![CDATA[
+	    			return this._renderedURL;
+	    		]]></getter>
+		    	<setter><![CDATA[
+		    		this._renderedURL = val;
+		    	]]></setter>
+	    	</property>
+	    	
+	    	<method name="update">
+	    		<body><![CDATA[
+	    			var anonbutton = document.getAnonymousElementByAttribute(this, "anonid", "anonbutton");
+	    			var anonimage = document.getAnonymousElementByAttribute(this, "anonid", "anonimage");
+	    			
+	    			var imageAttr = this.getAttribute('image');
+	    			if (imageAttr != null && imageAttr != "") {
+	    				anonbutton.style.display = "none";
+	    				anonbutton.setAttribute("wd3_selection_help","");
+	    				anonimage.setAttribute('alt', this.getAttribute('alt'));
+	    				anonimage.style.display = "inline";
+						anonimage.setAttribute("wd3_selection_help","resizer");
+	    				
+	    				var url = this._renderedURL;
+		    			if (url == "") {
+		    				url = this.getAttribute('wd3_renderedURL');
+		    				this.wd3_renderedURL = url;
+		    			}
+		    			
+		    			if (url != null && url != "") {
+		    				anonimage.setAttribute('src', url);
+		    				anonimage.style.display = "inline";	
+		    			} else {
+		    				anonimage.style.display = "none";	
+		    				
+		    			}
+	    			} else {
+	    				anonimage.style.display = "none";
+	    				anonimage.setAttribute("wd3_selection_help","");
+	    				var val = this.getAttribute('value');
+	    				if (val != null && val != "") {
+	    					anonbutton.setAttribute('value', val);
+	    				} else {
+	    					anonbutton.setAttribute('value', this.defaultButtonText);
+	    				}
+	    				anonbutton.setAttribute('alt', this.getAttribute('alt'));
+	    				anonbutton.style.display = "inline";
+	    				anonbutton.setAttribute("wd3_selection_help","resizer");
+	    			}
+	    		]]>
+	    		</body>
+	    	</method>
+	    </implementation>
+	    
+	    <handlers>
+	    	<handler event="DOMAttrModified" phase="capturing">
+	    		event.stopPropagation();
+	    	</handler>
+	    </handlers>
+	</binding>
+	
+</bindings>

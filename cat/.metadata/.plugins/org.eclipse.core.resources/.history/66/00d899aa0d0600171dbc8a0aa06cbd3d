@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.FirstMapper">
+	<select id="login" parameterType="model.First"  resultType="model.First">
+		
+		SELECT * FROM user WHERE userName = #{userName} AND userPwd = #{userPwd}
+		
+	</select>
+	
+	<select id="checkUser" parameterType="model.First"  resultType="model.First">
+		
+		SELECT * FROM user WHERE userName = #{userName}
+		
+	</select>
+	<select id="addUser" parameterType="model.First"  resultType="model.First">
+		
+		INSERT INTO kcat.user ( userName, userPwd, email, sex, birthday) VALUES (#{userName},#{userPwd},#{email},#{sex},#{birthday})
+			
+	</select>
+</mapper>

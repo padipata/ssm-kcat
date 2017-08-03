@@ -1,0 +1,27 @@
+.topbar .juli_6 {
+    background-color: #faba00;
+    color: #000;
+}
+.content{
+	width:800px;
+	height:800px;
+	margin:0 auto;
+	margin-top:80px;
+	border: solid #faba00 1px;
+	border-radius:20px;
+	padding:30px;
+}
+.biaoti{
+	font-size:24px;
+	font-family: "Microsoft YaHei";
+}
+.zhengwen{
+	font-size:18px;
+	font-family: "Microsoft YaHei";
+}
+.zhengwen p{
+	margin-bottom:20px;
+}
+p{
+	text-indent:2em;
+}

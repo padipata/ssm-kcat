@@ -1,0 +1,46 @@
+package dao;
+
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Component;
+
+import mapper.StudySoftMapper;
+import model.StudySoft;
+import model.StudySoft_titleB;
+import model.StudySoft_titleS;
+
+@Component
+public class StudySoftDAO {
+	StudySoftMapper studySoftMapper;
+
+	public StudySoftMapper getStudySoftMapper() {
+		return studySoftMapper;
+	}
+	@Resource
+	public void setStudySoftMapper(StudySoftMapper studySoftMapper) {
+		this.studySoftMapper = studySoftMapper;
+	}
+/**
+ * 获取所有的大标题(学院)
+ */
+	public ArrayList<StudySoft_titleB> getStudySoftB(){
+		return studySoftMapper.getStudySoftB();
+	}
+/**
+ * 通过大标题id获取小标题(专业)
+ */
+	public ArrayList<StudySoft_titleS> getStudySoftS(int tidB){
+		return studySoftMapper.getStudySoftS(tidB);
+	}
+/**
+ * 通过小标题id获取专业软件信息	
+ */
+	public ArrayList<StudySoft> getStudySoft(int tidS){
+		return studySoftMapper.getStudySoft(tidS);
+	}
+	
+	
+	
+}

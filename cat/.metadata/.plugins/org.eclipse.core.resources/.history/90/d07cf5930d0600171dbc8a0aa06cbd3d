@@ -1,0 +1,53 @@
+package model;
+
+public class StudySoft {
+	private int id;
+	private String softName;
+	private String softType;
+	private String softImage;
+	private String softUrl;
+	private int soft_to_titleS;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getSoftName() {
+		return softName;
+	}
+	public void setSoftName(String softName) {
+		this.softName = softName;
+	}
+	public String getSoftType() {
+		return softType;
+	}
+	public void setSoftType(String softType) {
+		this.softType = softType;
+	}
+	public String getSoftImage() {
+		return softImage;
+	}
+	public void setSoftImage(String softImage) {
+		this.softImage = softImage;
+	}
+	public String getSoftUrl() {
+		return softUrl;
+	}
+	public void setSoftUrl(String softUrl) {
+		this.softUrl = softUrl;
+	}
+	public int getSoft_to_titleS() {
+		return soft_to_titleS;
+	}
+	public void setSoft_to_titleS(int soft_to_titleS) {
+		this.soft_to_titleS = soft_to_titleS;
+	}
+	@Override
+	public String toString() {
+		return "StudySoft [id=" + id + ", softName=" + softName + ", softType=" + softType + ", softImage=" + softImage
+				+ ", softUrl=" + softUrl + ", soft_to_titleS=" + soft_to_titleS + "]";
+	}
+	
+	
+}

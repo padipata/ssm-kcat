@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<bindings xmlns="http://www.mozilla.org/xbl" 
+		  xmlns:xbl="http://www.mozilla.org/xbl" 
+		  xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<binding id="inputText" extends="inputs.xml#input">
+		<content>
+			<html:input anonid="input" type="text" style="background-position: bottom right; background-repeat: no-repeat"/>
+			<html:span style="display:none"><children/></html:span>
+		</content>
+		<implementation>
+			<field name="inputImage">"data:image/gif;base64,R0lGODlhEAAQAMZNAFqOvFGLu1eNvF2VxF+Ww2aZxWeaxU+Lu1mVw2GYxHKmznqs0nmqz5/G5EWOwVCSwmGgzWun0XOr0oK74Y/F6a/T7GCm02Olz2+s1IK74IvC5JDF6JrL6pjH5kmq31ux42W25HC44XO85nq74n/B54TF6YXE6Y3H6bLa8jmm3jqm3jmm3Uiq30mr4FWu21qz4lu141y04Wu85m+43XfA54XH6Rad2Rec2Rie2Sul3DWq3kKr3kKs3kOs3VG241O241Kz4XLB5nfB5QCY1gGX1gea1xif2B2h2kGy4Uy04FK341u54bvT1v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAH8ALAAAAAAQABAAAAe4gH+Cg4SFhRIMBQAABQwShn8LBhMNFRUNEwYLhwodHBugGxwdCo+CEgkaJCdNra0kGgmmDBhCMTWurTFCGAyCDzNAPEGtOz09PEAzD4IBS0dGSq0/OjhGR0sBggdJRURIuUNERUkHgg4uOTc+uTY3OS4OggwWMCsyrSopKiswFr5/JCAI8YJGKxYeWrwIgcDUnwsQRphAUeIDCBEjIFwoFIEAgwwUKExgQCACJEQDBAgY4AiSy0KBAAA7"</field>
+			<field name="styleNodeId">"input"</field>
+		</implementation>
+	</binding>
+	
+	<binding id="inputSecret" extends="inputs.xml#input">
+		<content>
+			<html:input anonid="input" type="password" style="background-position: bottom right; background-repeat: no-repeat"/>
+			<html:span style="display:none"><children/></html:span>
+		</content>
+		<implementation>
+			<field name="inputImage">"data:image/gif;base64,R0lGODlhEAAQAMZNAFqOvFGLu1eNvF2VxF+Ww2aZxWeaxU+Lu1mVw2GYxHKmznqs0nmqz5/G5EWOwVCSwmGgzWun0XOr0oK74Y/F6a/T7GCm02Olz2+s1IK74IvC5JDF6JrL6pjH5kmq31ux42W25HC44XO85nq74n/B54TF6YXE6Y3H6bLa8jmm3jqm3jmm3Uiq30mr4FWu21qz4lu141y04Wu85m+43XfA54XH6Rad2Rec2Rie2Sul3DWq3kKr3kKs3kOs3VG241O241Kz4XLB5nfB5QCY1gGX1gea1xif2B2h2kGy4Uy04FK341u54bvT1v///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAH8ALAAAAAAQABAAAAe4gH+Cg4SFhRIMBQAABQwShn8LBhMNFRUNEwYLhwodHBugGxwdCo+CEgkaJCdNra0kGgmmDBhCMTWurTFCGAyCDzNAPEGtOz09PEAzD4IBS0dGSq0/OjhGR0sBggdJRURIuUNERUkHgg4uOTc+uTY3OS4OggwWMCsyrSopKiswFr5/JCAI8YJGKxYeWrwIgcDUnwsQRphAUeIDCBEjIFwoFIEAgwwUKExgQCACJEQDBAgY4AiSy0KBAAA7"</field>
+			<field name="styleNodeId">"input"</field>
+		</implementation>
+	</binding>
+	
+</bindings>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.HomeworkMapper">
+	<select id="getHomework" parameterType="java.lang.String" resultType="model.Homework">
+		select * from zuoyefuzhu where category =#{category}
+	</select>
+	<select id="getCategory"  resultType="model.Homework">
+		SELECT DISTINCT category FROM zuoyefuzhu
+	</select>
+	
+	
+	
+</mapper>

@@ -1,0 +1,55 @@
+package controller;
+
+import java.util.ArrayList;
+
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+import dao.StudySoftDAO;
+import model.StudySoft;
+import model.StudySoft_titleB;
+import model.StudySoft_titleS;
+
+@Controller
+public class StudySoftController {
+	StudySoftDAO studySoftDAO;
+
+	public StudySoftDAO getStudySoftDAO() {
+		return studySoftDAO;
+	}
+	@Resource
+	public void setStudySoftDAO(StudySoftDAO studySoftDAO) {
+		this.studySoftDAO = studySoftDAO;
+	}
+/**
+ * 获取所有的大标题(学院)
+ */
+	@RequestMapping("/getStudySoftB.do")
+	@ResponseBody
+	public ArrayList<StudySoft_titleB> getStudySoftB(){
+		System.out.println("A:"+studySoftDAO.getStudySoftB());
+		return studySoftDAO.getStudySoftB();
+	}
+/**
+ * 通过大标题id获取小标题(专业)
+ */
+	@RequestMapping("/getStudySoftS.do")
+	@ResponseBody
+	public ArrayList<StudySoft_titleS> getStudySoftS(StudySoft_titleS studySoft_titleS){
+		System.out.println("B:"+studySoftDAO.getStudySoftS(1));
+		return studySoftDAO.getStudySoftS(studySoft_titleS.getTitleS_to_titleB());
+	}
+/**
+ * 通过小标题id获取专业软件信息	
+ */
+	@RequestMapping("/getStudySoft.do")
+	@ResponseBody
+	public ArrayList<StudySoft> getStudySoft(StudySoft studySoft){
+		System.out.println("D:"+studySoft.getSoft_to_titleS());
+		return studySoftDAO.getStudySoft(studySoft.getSoft_to_titleS());
+	}
+			
+}
